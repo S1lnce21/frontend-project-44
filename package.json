@@ -2,28 +2,32 @@
   "name": "@hexlet/code",
   "version": "1.0.1",
   "description": "[![Actions Status](https://github.com/S1lnce21/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/S1lnce21/frontend-project-44/actions)",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint ."
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Sergei",
   "license": "ISC",
   "bin": {
-    "code": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/S1lnce21/frontend-project-44.git"
   },
   "keywords": [
-    "brain-games"
+    "brain-games",
+    "brain-even"
   ],
   "bugs": {
     "url": "https://github.com/S1lnce21/frontend-project-44/issues"
   },
   "homepage": "https://github.com/S1lnce21/frontend-project-44#readme",
   "dependencies": {
+    "brain-even": "^1.0.0",
+    "brain-games": "^1.1.5",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
