@@ -1,35 +1,39 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
+import { playGame } from '../src/index.js';
 
-const getRandomNumber = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
 
-const getRandomExpression = () => {
-    const operations = ['+', '-', '*'];
-    const num1 = getRandomNumber(1, 50);
-    const num2 = getRandomNumber(1, 50);
-    const operation = operations[getRandomNumber(0, operations.length - 1)];
-    return { expression: `${num1} ${operation} ${num2}`, answer: eval(`${num1} ${operation} ${num2}`) };
+const getRandomOperator = () => {
+    const operators = ['+', '-', '*'];
+    const randomIndex = getRandomInt(0, operators.length - 1);
+    return operators[randomIndex];
 };
 
-const playCalc = () => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}! What is the result of the expression?`);
-
-    for (let i = 0; i < 3; i++) {
-        const { expression, answer } = getRandomExpression();
-        const userAnswer = readlineSync.question(`Question: ${expression}\nYour answer: `);
-
-        if (parseInt(userAnswer, 10) === answer) {
-            console.log('Correct!');
-        } else {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${answer}'.\nLet's try again, ${name}!`);
-            return;
-        }
+const calculate = (num1, num2, operator) => {
+    switch (operator) {
+        case '+':
+            return num1 + num2;
+        case '-':
+            return num1 - num2;
+        case '*':
+            return num1 * num2;
+        
     }
-
-    console.log(`Congratulations, ${name}!`);
 };
 
-playCalc();
+const Logic = () => {
+    const num1 = getRandomInt(1, 100);
+    const num2 = getRandomInt(1, 100);
+    const operator = getRandomOperator();
+    const question = `${num1} ${operator} ${num2}`;
+    const correctAnswer = calculate(num1, num2, operator).toString();
+
+    return { question, correctAnswer };
+};
+
+const playCalcGame = () => {
+    playGame(logicGames);
+};
+
+playCalcGame();
