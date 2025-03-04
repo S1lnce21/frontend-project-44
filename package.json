@@ -14,7 +14,8 @@
     "brain-even": "bin/brain-even.js",
     "brain-calc": "bin/brain-calc.js",
     "brain-gcd": "bin/brain-gcd.js",
-    "brain-progression": "bin/brain-progression.js"
+    "brain-progression": "bin/brain-progression.js",
+    "brain-prime": "bin/brain-prime.js"
   },
   "repository": {
     "type": "git",
@@ -25,7 +26,8 @@
     "brain-even",
     "brain-calc",
     "brain-gcd",
-    "brain-progression"
+    "brain-progression",
+    "brain-prime"
   ],
   "bugs": {
     "url": "https://github.com/S1lnce21/frontend-project-44/issues"
