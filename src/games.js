@@ -1,9 +1,6 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
-
-import greet from '../src/index.js';
-
+//logicGames
 const playGame = (name) => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
