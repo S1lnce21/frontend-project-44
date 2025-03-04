@@ -12,7 +12,8 @@
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",
-    "brain-calc": "bin/brain-calc.js"
+    "brain-calc": "bin/brain-calc.js",
+    "brain-gcd": "bin/brain-gcd.js"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,8 @@
   "keywords": [
     "brain-games",
     "brain-even",
-    "brain-calc"
+    "brain-calc",
+    "brain-gcd"
   ],
   "bugs": {
     "url": "https://github.com/S1lnce21/frontend-project-44/issues"
