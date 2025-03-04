@@ -12,7 +12,7 @@ const getRandomExpression = () => {
     return { expression: `${num1} ${operation} ${num2}`, answer: eval(`${num1} ${operation} ${num2}`) };
 };
 
-const playGame = () => {
+const playCalc = () => {
     console.log('Welcome to the Brain Games!');
     const name = readlineSync.question('May I have your name? ');
     console.log(`Hello, ${name}! What is the result of the expression?`);
@@ -32,4 +32,4 @@ const playGame = () => {
     console.log(`Congratulations, ${name}!`);
 };
 
-playGame();
+playCalc();

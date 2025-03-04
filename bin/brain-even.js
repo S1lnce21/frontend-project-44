@@ -2,26 +2,19 @@
 
 import readlineSync from 'readline-sync';
 
-import greet from '../src/index.js';
+import { playGame } from '../src/index.js';
 
-const playGame = (name) => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
-
-    for (let i = 0; i < 3; i++) {
-      const number = Math.floor(Math.random() * 100);
-      const answer = readlineSync.question(`Question: ${number}\nYour answer: `);
-
-      if ((number % 2 === 0 && answer.toLowerCase() === "yes") || (number % 2 !== 0 && answer.toLowerCase() === "no")) {
-        console.log("Correct!");
-      } else {
-        console.log(`'${answer}' is wrong answer ;(. Correct answer was '${number % 2 === 0 ? "yes" : "no"}'.`);
-        console.log(`Let's try again, ${name}!`);
-        return;
-      }
-    }
-
-    console.log(`Congratulations, ${name}!`);
+const getQuestion = () => {
+    const number = Math.floor(Math.random() * 100);
+    console.log('Answer "yes" if the number is even, otherwise answer "no".')
+    return {
+        question: `${number}`,
+        correctAnswer: number % 2 === 0 ? 'yes' : 'no',
+    };
 };
 
-const userName = greet();
-playGame(userName);
+const checkAnswer = (question, answer) => {
+    return answer.toLowerCase() === question.correctAnswer;
+};
+
+playGame(3, getQuestion, checkAnswer);
