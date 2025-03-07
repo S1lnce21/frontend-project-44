@@ -25,7 +25,7 @@ The hexlet-check.yml file is responsible for running these tests - do not delete
 2. Установка:
 
 Для установки игр используйте команду:
-//command//
+make install
 
 3. Установка пакетов:
 
