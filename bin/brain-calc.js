@@ -2,7 +2,7 @@
 
 import playGame from '../src/index.js';
 
-const getRandomInt = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+import getRandomInt from '../src/utils.js';
 
 const getRandomOperator = () => {
     const operators = ['+', '-', '*'];
