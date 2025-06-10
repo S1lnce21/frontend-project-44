@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
+//import readlineSync from 'readline-sync';
 
 const roundsCount = 3;
 const isPrime = (num) => {

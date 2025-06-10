@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import readlineSync from 'readline-sync';
+//import readlineSync from 'readline-sync';
 
 import playGame from '../src/index.js';
 
